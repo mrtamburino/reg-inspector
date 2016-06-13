@@ -23,6 +23,8 @@ public:
     ~Frame ();
     
     WINDOW * _ptrWin;
+    
+    void show (void);
 };
 
 class UIController
@@ -34,9 +36,10 @@ public:
     Frame* createWin ( unsigned char ucHeight_IN,
                        unsigned char ucWidth_IN,
                        unsigned char ucPosX_IN,
-                       unsigned char ucPosY_IN);
+                       unsigned char ucPosY_IN,
+                       unsigned char ucBorder_IN);
     
-    Frame* createMainWin ( const char* ptrsTitle_IN);
+    Frame* createMainWin ( const char* ptrsTitle_IN, unsigned char ucBorder_IN);
     
     void readStr (Frame*, unsigned char,unsigned char, char*, unsigned char);
     void writeStr (Frame*, unsigned char,unsigned char, const char*);
